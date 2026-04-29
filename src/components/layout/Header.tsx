@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ias-logo-header.svg";
+import logo from "@/assets/ias-header-logo-clean.png";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -37,7 +37,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2" aria-label={SITE.name}>
-          <img src={logo} alt={`${SITE.name} logo`} className="h-11 md:h-14 w-auto" />
+          <img src={logo} alt={`${SITE.name} logo`} className="h-12 md:h-16 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
