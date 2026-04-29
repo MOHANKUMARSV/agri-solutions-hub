@@ -1,0 +1,20 @@
+<svg width="1270" height="245" viewBox="0 0 1270 245" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Indian Agro Service logo</title>
+  <desc id="desc">Transparent horizontal Indian Agro Service logo with leaf, hand and tagline.</desc>
+  <g transform="translate(10 12)">
+    <path d="M24 90C41 31 86 6 136 25C110 73 75 94 24 90Z" fill="#A8D447"/>
+    <path d="M124 50C89 50 64 60 45 81" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+    <path d="M144 72C160 13 213 -10 270 25C237 77 194 95 144 72Z" fill="#A8D447"/>
+    <path d="M158 62C194 44 224 38 252 39" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+    <path d="M42 94C12 134 12 177 40 210" stroke="#F1C24B" stroke-width="18" stroke-linecap="butt"/>
+    <path d="M258 88C282 129 281 179 250 214" stroke="#F1C24B" stroke-width="18" stroke-linecap="butt"/>
+    <path d="M98 205C62 207 28 190 8 157C45 166 65 181 88 190C105 197 124 192 134 181C125 178 103 172 94 158C92 154 96 149 101 151C122 162 143 169 171 170C187 170 201 175 213 184C205 203 155 213 98 205Z" fill="#214C2A"/>
+    <path d="M151 185C153 135 159 100 170 70" stroke="#9C9B8B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M171 132C184 112 205 107 228 120C211 138 191 142 171 132Z" fill="#A8D447"/>
+    <path d="M182 125C197 121 210 121 221 122" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.95"/>
+  </g>
+  <text x="315" y="114" fill="#214C2A" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="86" font-weight="800" letter-spacing="0">Indian Agro Service</text>
+  <line x1="318" y1="188" x2="573" y2="188" stroke="#A7A594" stroke-width="5"/>
+  <text x="590" y="201" fill="#F1C24B" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="45" font-weight="700" letter-spacing="0">The Farmer’s Choice</text>
+  <line x1="1028" y1="188" x2="1256" y2="188" stroke="#A7A594" stroke-width="5"/>
+</svg>
