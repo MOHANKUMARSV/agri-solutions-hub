@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/ias-full-logo.png";
+import logo from "@/assets/team-ias-logo.png";
 import { SITE, waLink } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
