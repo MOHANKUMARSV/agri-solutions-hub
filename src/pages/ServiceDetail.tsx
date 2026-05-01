@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { getService, SERVICES } from "@/lib/services";
+import { SERVICE_PHOTOS } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
@@ -12,6 +13,8 @@ const ServiceDetail = () => {
   if (!service) return <NotFound />;
 
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const photos = SERVICE_PHOTOS[service.slug];
+  const coverImage = photos?.cover || service.image;
 
   return (
     <>

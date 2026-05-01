@@ -8,6 +8,12 @@ import ph07 from "@/assets/projects/polyhouse/ph-07.jpg";
 import ph08 from "@/assets/projects/polyhouse/ph-08.jpg";
 import ph09 from "@/assets/projects/polyhouse/ph-09.jpg";
 
+import ls01 from "@/assets/projects/landscaping/ls-01.jpg";
+import ls02 from "@/assets/projects/landscaping/ls-02.jpg";
+import ls03 from "@/assets/projects/landscaping/ls-03.jpg";
+import ls04 from "@/assets/projects/landscaping/ls-04.jpg";
+import ls05 from "@/assets/projects/landscaping/ls-05.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -39,4 +45,46 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "ph-04", image: ph04, caption: "Top ridge ventilation detail" },
     ],
   },
+  {
+    key: "landscaping",
+    title: "Landscaping & Gardening",
+    description:
+      "Designed green spaces, ornamental cultivation and managed plantings — from grow-bag layouts to dense canopy installations executed for client sites across Tamil Nadu.",
+    photos: [
+      { id: "ls-04", image: ls04, caption: "Lush turmeric canopy under managed shade structure" },
+      { id: "ls-01", image: ls01, caption: "Precision row layout with drip irrigation & ground cover" },
+      { id: "ls-05", image: ls05, caption: "Dense ornamental greenery — mature growth stage" },
+      { id: "ls-02", image: ls02, caption: "Large-format plot with weed-mat and trellis system" },
+      { id: "ls-03", image: ls03, caption: "Mixed-bed planting with leafy ornamentals" },
+    ],
+  },
 ];
+
+// Per-service photo map: cover image + small gallery (uses processed real project photos
+// where available, falls back to the service's own image otherwise).
+export type ServicePhotos = {
+  cover?: string;
+  gallery: { image: string; caption: string }[];
+};
+
+export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
+  polyhouse: {
+    gallery: [
+      { image: ph08, caption: "Multi-span polyhouse — Madurai" },
+      { image: ph07, caption: "Side ventilation & gutter" },
+      { image: ph01, caption: "200µ UV film, arch structure" },
+      { image: ph05, caption: "Centre ridge ventilator" },
+      { image: ph06, caption: "Wide-span with shade net" },
+      { image: ph09, caption: "NHB-approved project" },
+    ],
+  },
+  landscaping: {
+    gallery: [
+      { image: ls04, caption: "Lush canopy — managed shade" },
+      { image: ls01, caption: "Precision row layout" },
+      { image: ls05, caption: "Dense ornamental greenery" },
+      { image: ls02, caption: "Large-format planting" },
+      { image: ls03, caption: "Mixed-bed leafy ornamentals" },
+    ],
+  },
+};
