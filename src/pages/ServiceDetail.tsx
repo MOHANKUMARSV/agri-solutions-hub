@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { getService, SERVICES } from "@/lib/services";
+import { SERVICE_PHOTOS } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
@@ -12,12 +13,14 @@ const ServiceDetail = () => {
   if (!service) return <NotFound />;
 
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const photos = SERVICE_PHOTOS[service.slug];
+  const coverImage = photos?.cover || service.image;
 
   return (
     <>
       <section className="relative">
         <div className="absolute inset-0">
-          <img src={service.image} alt={service.title} className="w-full h-full object-cover" width={1280} height={800} />
+          <img src={coverImage} alt={service.title} className="w-full h-full object-cover" width={1280} height={800} />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         </div>
         <div className="relative container py-20 md:py-28 text-primary-foreground">
@@ -66,7 +69,34 @@ const ServiceDetail = () => {
         </aside>
       </section>
 
-      <section className="container pb-8">
+      {photos?.gallery?.length ? (
+        <section className="container pb-4">
+          <div className="max-w-2xl mb-6">
+            <div className="text-xs uppercase tracking-wider font-semibold text-secondary">Project Gallery</div>
+            <h2 className="font-display text-2xl md:text-3xl text-primary mt-1">Real {service.title.toLowerCase()} we've executed</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {photos.gallery.map((p, i) => (
+              <figure
+                key={i}
+                className="rounded-xl overflow-hidden border shadow-soft hover:shadow-elegant transition-smooth group"
+              >
+                <img
+                  src={p.image}
+                  alt={p.caption}
+                  loading="lazy"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-smooth duration-500"
+                />
+                <figcaption className="p-2 bg-card text-[11px] text-muted-foreground line-clamp-2">
+                  {p.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section className="container pb-8 pt-12">
         <h2 className="font-display text-2xl md:text-3xl text-primary text-center">Other services you may like</h2>
         <div className="mt-8 grid sm:grid-cols-3 gap-6">
           {others.map((o) => (
