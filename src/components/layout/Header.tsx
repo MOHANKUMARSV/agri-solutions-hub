@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ias-header-logo-clean.png";
+import logo from "@/assets/team-ias-logo.png";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/products", label: "Products" },
   { to: "/projects", label: "Projects" },
   { to: "/investment", label: "Joint Venture" },
   { to: "/about", label: "About" },
