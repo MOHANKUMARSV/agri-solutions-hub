@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo-stacked.jpg";
+import logo from "@/assets/ias-full-logo.png";
 import { SITE, waLink } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
@@ -8,8 +8,8 @@ const Footer = () => (
   <footer className="bg-primary text-primary-foreground mt-24">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-1">
-        <div className="bg-background rounded-xl p-3 inline-block">
-          <img src={logo} alt={SITE.name} className="h-20 w-auto" />
+        <div className="bg-background rounded-xl p-4 inline-block">
+          <img src={logo} alt={SITE.name} className="h-24 md:h-28 w-auto" />
         </div>
         <p className="mt-4 text-sm text-primary-foreground/80">
           {SITE.tagline}. End-to-end agri solutions across India — built for yield, profit and longevity.
