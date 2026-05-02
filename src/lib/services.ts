@@ -1,4 +1,4 @@
-import polyhouse from "@/assets/service-polyhouse.jpg";
+import polyhouse from "@/assets/projects/polyhouse/cover-polyhouse.jpg";
 import hydroponic from "@/assets/service-hydroponic.jpg";
 import rooftop from "@/assets/service-rooftop.jpg";
 import vertical from "@/assets/service-vertical.jpg";

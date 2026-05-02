@@ -69,6 +69,7 @@ export type ServicePhotos = {
 
 export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
   polyhouse: {
+    cover: ph08,
     gallery: [
       { image: ph08, caption: "Multi-span polyhouse — Madurai" },
       { image: ph07, caption: "Side ventilation & gutter" },
