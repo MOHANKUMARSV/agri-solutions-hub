@@ -22,6 +22,13 @@ import ns5 from "@/assets/projects/nursery/ns-5.jpg";
 import ns6 from "@/assets/projects/nursery/ns-6.jpg";
 import ns7 from "@/assets/projects/nursery/ns-7.jpg";
 
+import sd01 from "@/assets/projects/solar-dryer/sd-01.jpg";
+import sd02 from "@/assets/projects/solar-dryer/sd-02.jpg";
+import sd03 from "@/assets/projects/solar-dryer/sd-03.jpg";
+import sd04 from "@/assets/projects/solar-dryer/sd-04.jpg";
+import sd05 from "@/assets/projects/solar-dryer/sd-05.jpg";
+import sdCover from "@/assets/projects/solar-dryer/cover-solar-dryer.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -81,6 +88,19 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "ls-03", image: ls03, caption: "Mixed-bed planting with leafy ornamentals" },
     ],
   },
+  {
+    key: "solar-dryer",
+    title: "Solar Dryer Projects",
+    description:
+      "Tunnel-type solar dryer domes built with GI hoop frames and UV-stabilised polyethylene film — engineered for hygienic, faster drying of turmeric, chillies, fruits and herbs.",
+    photos: [
+      { id: "sd-02", image: sd02, caption: "Tunnel solar dryer under installation — exhaust fan & door fitted" },
+      { id: "sd-01", image: sd01, caption: "GI hoop frame with UV-stabilised poly cover" },
+      { id: "sd-03", image: sd03, caption: "Interior view — full arch span with side ventilation" },
+      { id: "sd-04", image: sd04, caption: "Long-bay tunnel — uniform light diffusion" },
+      { id: "sd-05", image: sd05, caption: "End-wall with exhaust fan & access door" },
+    ],
+  },
 ];
 
 // Per-service photo map: cover image + small gallery (uses processed real project photos
@@ -119,6 +139,16 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: ls05, caption: "Dense ornamental greenery" },
       { image: ls02, caption: "Large-format planting" },
       { image: ls03, caption: "Mixed-bed leafy ornamentals" },
+    ],
+  },
+  "solar-dryer": {
+    cover: sdCover,
+    gallery: [
+      { image: sd02, caption: "Tunnel dryer — installation stage" },
+      { image: sd01, caption: "GI hoop frame with UV poly cover" },
+      { image: sd03, caption: "Interior arch — full span" },
+      { image: sd04, caption: "Long-bay tunnel interior" },
+      { image: sd05, caption: "End-wall with exhaust fan" },
     ],
   },
 };
