@@ -2,7 +2,7 @@ import polyhouse from "@/assets/projects/polyhouse/cover-polyhouse.jpg";
 import hydroponic from "@/assets/service-hydroponic.jpg";
 import rooftop from "@/assets/service-rooftop.jpg";
 import vertical from "@/assets/service-vertical.jpg";
-import nursery from "@/assets/service-nursery.jpg";
+import nursery from "@/assets/projects/nursery/cover-nursery.jpg";
 import landscaping from "@/assets/projects/landscaping/cover-landscaping.jpg";
 import solar from "@/assets/service-solar.jpg";
 import pondliner from "@/assets/service-pondliner.jpg";

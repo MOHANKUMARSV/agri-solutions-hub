@@ -11,6 +11,7 @@ import Investment from "./pages/Investment";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Products from "./pages/Products";
+import Crops from "./pages/Crops";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/projects", element: <Projects /> },
       { path: "/products", element: <Products /> },
+      { path: "/crops", element: <Crops /> },
       { path: "/contact", element: <Contact /> },
       { path: "*", element: <NotFound /> },
     ],

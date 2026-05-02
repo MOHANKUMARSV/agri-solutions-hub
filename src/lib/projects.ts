@@ -14,6 +14,14 @@ import ls03 from "@/assets/projects/landscaping/ls-03.jpg";
 import ls04 from "@/assets/projects/landscaping/ls-04.jpg";
 import ls05 from "@/assets/projects/landscaping/ls-05.jpg";
 
+import ns1 from "@/assets/projects/nursery/ns-1.jpg";
+import ns2 from "@/assets/projects/nursery/ns-2.jpg";
+import ns3 from "@/assets/projects/nursery/ns-3.jpg";
+import ns4 from "@/assets/projects/nursery/ns-4.jpg";
+import ns5 from "@/assets/projects/nursery/ns-5.jpg";
+import ns6 from "@/assets/projects/nursery/ns-6.jpg";
+import ns7 from "@/assets/projects/nursery/ns-7.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -43,6 +51,21 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "ph-06", image: ph06, caption: "Wide-span hoop structure with shade net" },
       { id: "ph-02", image: ph02, caption: "Side wall insect net & curtain rollup" },
       { id: "ph-04", image: ph04, caption: "Top ridge ventilation detail" },
+    ],
+  },
+  {
+    key: "nursery",
+    title: "Nursery Projects",
+    description:
+      "Commercial seedling nurseries with shade-net & poly-cover structures, mist irrigation, pro-trays and coco-peat media — producing lakhs of healthy, uniform saplings per cycle.",
+    photos: [
+      { id: "ns-3", image: ns3, caption: "Naturally ventilated nursery — long bay layout" },
+      { id: "ns-4", image: ns4, caption: "Tomato & chilli seedlings on raised beds" },
+      { id: "ns-5", image: ns5, caption: "Mist irrigation under poly + shade-net cover" },
+      { id: "ns-1", image: ns1, caption: "Shade-net nursery with pro-tray seedlings" },
+      { id: "ns-2", image: ns2, caption: "Bulk pro-tray production for FPO supply" },
+      { id: "ns-7", image: ns7, caption: "Tomato seedlings ready for transplanting" },
+      { id: "ns-6", image: ns6, caption: "Hardening area — poly-cover nursery" },
     ],
   },
   {
@@ -77,6 +100,16 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: ph05, caption: "Centre ridge ventilator" },
       { image: ph06, caption: "Wide-span with shade net" },
       { image: ph09, caption: "NHB-approved project" },
+    ],
+  },
+  nursery: {
+    gallery: [
+      { image: ns3, caption: "Naturally ventilated nursery" },
+      { image: ns4, caption: "Seedlings on raised beds" },
+      { image: ns5, caption: "Mist irrigation system" },
+      { image: ns1, caption: "Shade-net pro-tray nursery" },
+      { image: ns2, caption: "Bulk pro-tray production" },
+      { image: ns7, caption: "Hardened tomato seedlings" },
     ],
   },
   landscaping: {
