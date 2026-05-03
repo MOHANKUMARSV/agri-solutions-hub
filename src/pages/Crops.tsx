@@ -11,8 +11,9 @@ const CropCard = ({ crop }: { crop: Crop }) => (
     <div className="relative aspect-[4/3] overflow-hidden">
       <img
         src={crop.image}
-        alt={crop.name}
+        alt={`${crop.name} grown under ${crop.system} by Indian Agro Service`}
         loading="lazy"
+        decoding="async"
         width={1280}
         height={896}
         className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
