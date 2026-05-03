@@ -29,6 +29,14 @@ import sd04 from "@/assets/projects/solar-dryer/sd-04.jpg";
 import sd05 from "@/assets/projects/solar-dryer/sd-05.jpg";
 import sdCover from "@/assets/projects/solar-dryer/cover-solar-dryer.jpg";
 
+import vf01 from "@/assets/projects/vertical-farming/vf-01.jpg";
+import vf02 from "@/assets/projects/vertical-farming/vf-02.jpg";
+import vf03 from "@/assets/projects/vertical-farming/vf-03.jpg";
+import vf04 from "@/assets/projects/vertical-farming/vf-04.jpg";
+import vf05 from "@/assets/projects/vertical-farming/vf-05.jpg";
+import vf06 from "@/assets/projects/vertical-farming/vf-06.jpg";
+import vfCover from "@/assets/projects/vertical-farming/cover-vertical-farming.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -101,6 +109,20 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "sd-05", image: sd05, caption: "End-wall with exhaust fan & access door" },
     ],
   },
+  {
+    key: "vertical-farming",
+    title: "Vertical Farming",
+    description:
+      "Vertical PVC-tower and stacked-rack strawberry systems inside climate-controlled polyhouses — maximizing yield per sq.ft with drip-fed soilless media and shade-net cover.",
+    photos: [
+      { id: "vf-02", image: vf02, caption: "Multi-tier vertical PVC towers — strawberry corridor" },
+      { id: "vf-01", image: vf01, caption: "A-frame vertical towers with fruiting strawberry plants" },
+      { id: "vf-03", image: vf03, caption: "Stacked grow-bag beds under polyhouse cover" },
+      { id: "vf-06", image: vf06, caption: "Drip-fed PVC tower system — close-up" },
+      { id: "vf-04", image: vf04, caption: "High-density strawberry beds — full canopy stage" },
+      { id: "vf-05", image: vf05, caption: "Mulched raised beds inside controlled polyhouse" },
+    ],
+  },
 ];
 
 // Per-service photo map: cover image + small gallery (uses processed real project photos
@@ -149,6 +171,17 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: sd03, caption: "Interior arch — full span" },
       { image: sd04, caption: "Long-bay tunnel interior" },
       { image: sd05, caption: "End-wall with exhaust fan" },
+    ],
+  },
+  "vertical-farming": {
+    cover: vfCover,
+    gallery: [
+      { image: vf02, caption: "Multi-tier PVC tower corridor" },
+      { image: vf01, caption: "A-frame strawberry towers" },
+      { image: vf03, caption: "Stacked grow-bag beds" },
+      { image: vf06, caption: "Drip-fed PVC tower — close-up" },
+      { image: vf04, caption: "High-density strawberry beds" },
+      { image: vf05, caption: "Mulched raised beds in polyhouse" },
     ],
   },
 };
