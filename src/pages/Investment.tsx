@@ -2,6 +2,7 @@ import { CheckCircle2, ShieldCheck, TrendingUp, Wallet } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import jvImg from "@/assets/jv-partnership.jpg";
 
 const steps = [
@@ -18,6 +19,11 @@ const tiers = [
 
 const Investment = () => (
   <>
+    <Seo
+      title="Agri Joint Venture & Farm Investment Projects in India"
+      description="Invest in Indian agriculture the modern way. IAS designs, builds and operates polyhouse, hydroponic and integrated farm JV projects across Tamil Nadu and India with transparent profit sharing."
+      keywords={["agri investment India","polyhouse joint venture","hydroponic farm investment","farm IRR Tamil Nadu","agritech JV"]}
+    />
     <PageHeader
       eyebrow="Joint Venture Projects"
       title="Invest in Indian agriculture, the modern way"
