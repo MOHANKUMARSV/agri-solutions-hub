@@ -126,7 +126,7 @@ const ServiceDetail = () => {
         <div className="mt-8 grid sm:grid-cols-3 gap-6">
           {others.map((o) => (
             <Link key={o.slug} to={`/services/${o.slug}`} className="group rounded-2xl overflow-hidden border bg-card shadow-soft hover:shadow-elegant transition-smooth">
-              <img src={o.image} alt={o.title} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-smooth" width={1280} height={800} />
+              <img src={o.image} alt={`${o.title} — Indian Agro Service`} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-smooth" width={1280} height={800} />
               <div className="p-4">
                 <div className="font-display text-lg text-primary">{o.title}</div>
                 <div className="text-xs text-muted-foreground mt-1">{o.short}</div>
