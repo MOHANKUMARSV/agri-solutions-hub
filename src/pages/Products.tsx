@@ -6,6 +6,7 @@ import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 import { SITE, waLink } from "@/lib/site";
+import { PRODUCTS_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const Products = () => {
   return (
@@ -14,6 +15,7 @@ const Products = () => {
         title="Greenhouse, Hydroponics & Farm Materials — Products"
         description="Greenhouse film, shade nets, drip & fertigation, hydroponic systems, pondliner geomembrane and farm infrastructure materials supplied by Indian Agro Service across India."
         keywords={["greenhouse film supplier India","shade net Tamil Nadu","drip irrigation","HDPE pondliner","hydroponic system supplier India","grow bags Coimbatore"]}
+        jsonLd={buildFaqLd(PRODUCTS_FAQS)}
       />
       <PageHeader
         eyebrow="What we supply"

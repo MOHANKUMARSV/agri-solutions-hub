@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
 import logo from "@/assets/logo-stacked.jpg";
+import { ABOUT_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const values = [
   { icon: Leaf, title: "Farmer-first", desc: "Every project is judged by one question — does it make the farmer more profitable?" },
@@ -17,6 +18,7 @@ const About = () => (
       title="About Indian Agro Service — Perundurai, Tamil Nadu"
       description="Founded in Tamil Nadu, Indian Agro Service is a team of agronomists and engineers building turnkey polyhouse, hydroponics, vertical farming and rooftop garden projects across India."
       keywords={["Indian Agro Service","IAS Perundurai","agri company Tamil Nadu","polyhouse company Erode","Coimbatore agri builder"]}
+      jsonLd={buildFaqLd(ABOUT_FAQS)}
     />
     <PageHeader eyebrow="About Us" title="Building India's next-generation agri infrastructure" subtitle="We are a team of agronomists, engineers and farmers helping growers, urban gardeners and investors build profitable agri projects." />
 

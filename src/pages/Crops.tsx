@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { CROPS, type Crop } from "@/lib/crops";
+import { CROPS_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const CropCard = ({ crop }: { crop: Crop }) => (
   <article className="group rounded-3xl overflow-hidden border bg-card shadow-soft hover:shadow-elegant transition-smooth flex flex-col">
