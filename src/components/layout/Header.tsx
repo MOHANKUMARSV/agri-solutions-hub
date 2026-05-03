@@ -37,9 +37,9 @@ const Header = () => {
         scrolled ? "bg-background/95 backdrop-blur shadow-soft" : "bg-background/70 backdrop-blur-sm",
       )}
     >
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2" aria-label={SITE.name}>
-          <img src={logo} alt={`${SITE.name} logo`} className="h-12 md:h-16 w-auto" />
+      <div className="container flex items-center justify-between h-20 md:h-24">
+        <Link to="/" className="flex items-center" aria-label={SITE.name}>
+          <img src={logo} alt={`${SITE.name} logo`} className="h-16 md:h-20 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
