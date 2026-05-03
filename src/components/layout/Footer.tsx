@@ -8,7 +8,7 @@ const Footer = () => (
   <footer className="bg-primary text-primary-foreground mt-24">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-1">
-        <div className="bg-background rounded-xl p-5 inline-block">
+        <div className="bg-background rounded-xl p-2 inline-block">
           <img src={logo} alt={SITE.name} className="h-32 md:h-40 w-auto" />
         </div>
         <p className="mt-4 text-sm text-primary-foreground/80">
