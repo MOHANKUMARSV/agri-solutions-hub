@@ -144,6 +144,17 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "vf-05", image: vf05, caption: "Mulched raised beds inside controlled polyhouse" },
     ],
   },
+  {
+    key: "pondliner",
+    title: "Pondliner Projects",
+    description:
+      "HDPE / geomembrane pondliner installation for farm ponds and irrigation reservoirs — fully sealed, leak-proof, UV-stabilised liners weighed down with sandbags during fill testing.",
+    photos: [
+      { id: "pl-03", image: pl03, caption: "Large farm pond lined with HDPE geomembrane — fill test in progress" },
+      { id: "pl-02", image: pl02, caption: "Crew checking liner seams during water filling" },
+      { id: "pl-01", image: pl01, caption: "Inlet pipe & sandbag-anchored edge of pondliner" },
+    ],
+  },
 ];
 
 // Per-service photo map: cover image + small gallery (uses processed real project photos
