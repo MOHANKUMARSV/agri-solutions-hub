@@ -44,7 +44,7 @@ const ServiceDetail = () => {
       />
       <section className="relative">
         <div className="absolute inset-0">
-          <img src={coverImage} alt={service.title} className="w-full h-full object-cover" width={1280} height={800} />
+          <img src={coverImage} alt={`${service.title} project by Indian Agro Service in Tamil Nadu`} fetchPriority="high" decoding="async" className="w-full h-full object-cover" width={1280} height={800} />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         </div>
         <div className="relative container py-20 md:py-28 text-primary-foreground">
