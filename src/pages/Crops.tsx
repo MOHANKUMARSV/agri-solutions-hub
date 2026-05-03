@@ -80,6 +80,7 @@ const Crops = () => {
         title="Crops We Help You Grow — Cucumber, Capsicum, Strawberry & More"
         description="Polyhouse, hydroponic and shade-net cultivation of cucumber, capsicum, strawberry, tomato, lettuce, chilli, gerbera and muskmelon — best-suited high-value crops for South Indian climate."
         keywords={["polyhouse cucumber Tamil Nadu","capsicum farming India","strawberry hydroponic","gerbera flower polyhouse","tomato polyhouse Erode","lettuce hydroponic Coimbatore"]}
+        jsonLd={buildFaqLd(CROPS_FAQS)}
       />
       <PageHeader
         eyebrow="What We Grow"

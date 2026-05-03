@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
+import { SERVICE_FAQS, buildFaqLd } from "@/lib/faqs";
 import NotFound from "./NotFound";
 
 const ServiceDetail = () => {
@@ -16,6 +17,7 @@ const ServiceDetail = () => {
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
   const photos = SERVICE_PHOTOS[service.slug];
   const coverImage = photos?.cover || service.image;
+  const faqs = SERVICE_FAQS[service.slug];
 
   return (
     <>
@@ -33,14 +35,17 @@ const ServiceDetail = () => {
           `${service.title} setup`,
           "Indian Agro Service",
         ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          serviceType: service.title,
-          provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
-          areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
-          description: service.solution,
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: service.title,
+            provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
+            areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
+            description: service.solution,
+          },
+          ...(faqs ? [buildFaqLd(faqs)] : []),
+        ]}
       />
       <section className="relative">
         <div className="absolute inset-0">
