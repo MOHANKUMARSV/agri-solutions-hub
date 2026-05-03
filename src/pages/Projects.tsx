@@ -32,8 +32,9 @@ const Projects = () => {
               >
                 <img
                   src={p.image}
-                  alt={p.caption}
+                  alt={`${p.caption} — ${cat.title} by Indian Agro Service`}
                   loading="lazy"
+                  decoding="async"
                   className={`w-full object-cover group-hover:scale-105 transition-smooth duration-500 ${i % 3 === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`}
                 />
                 <figcaption className="p-4 bg-card text-sm text-muted-foreground">
