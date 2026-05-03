@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ias-full-logo.png";
+import logo from "@/assets/ias-full-logo-v2.png";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -37,9 +37,9 @@ const Header = () => {
         scrolled ? "bg-background/95 backdrop-blur shadow-soft" : "bg-background/70 backdrop-blur-sm",
       )}
     >
-      <div className="container flex items-center justify-between h-20 md:h-24">
+      <div className="container flex items-center justify-between h-24 md:h-28">
         <Link to="/" className="flex items-center" aria-label={SITE.name}>
-          <img src={logo} alt={`${SITE.name} logo`} className="h-16 md:h-20 w-auto" />
+          <img src={logo} alt={`${SITE.name} logo`} className="h-20 md:h-24 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
