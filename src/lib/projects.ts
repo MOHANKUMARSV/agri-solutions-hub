@@ -37,6 +37,11 @@ import vf05 from "@/assets/projects/vertical-farming/vf-05.jpg";
 import vf06 from "@/assets/projects/vertical-farming/vf-06.jpg";
 import vfCover from "@/assets/projects/vertical-farming/cover-vertical-farming.jpg";
 
+import rg01 from "@/assets/projects/rooftop-gardening/rg-01.jpg";
+import rg02 from "@/assets/projects/rooftop-gardening/rg-02.jpg";
+import rg03 from "@/assets/projects/rooftop-gardening/rg-03.jpg";
+import rgCover from "@/assets/projects/rooftop-gardening/cover-rooftop-gardening.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -110,6 +115,17 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
     ],
   },
   {
+    key: "rooftop-gardening",
+    title: "Rooftop Gardening",
+    description:
+      "Rooftop kitchen gardens with steel-frame shade-net canopy, potted vegetables, herbs and flowering plants — turning unused terraces into productive, cool, green spaces.",
+    photos: [
+      { id: "rg-02", image: rg02, caption: "Steel-frame shade-net canopy over rooftop kitchen garden" },
+      { id: "rg-01", image: rg01, caption: "Potted vegetables & herbs under green shade-net" },
+      { id: "rg-03", image: rg03, caption: "Mature rooftop garden with mixed vegetable & ornamental pots" },
+    ],
+  },
+  {
     key: "vertical-farming",
     title: "Vertical Farming",
     description:
@@ -171,6 +187,14 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: sd03, caption: "Interior arch — full span" },
       { image: sd04, caption: "Long-bay tunnel interior" },
       { image: sd05, caption: "End-wall with exhaust fan" },
+    ],
+  },
+  "rooftop-gardening": {
+    cover: rgCover,
+    gallery: [
+      { image: rg02, caption: "Shade-net canopy over rooftop garden" },
+      { image: rg01, caption: "Potted vegetables & herbs" },
+      { image: rg03, caption: "Mature mixed rooftop garden" },
     ],
   },
   "vertical-farming": {
