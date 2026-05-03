@@ -42,6 +42,11 @@ import rg02 from "@/assets/projects/rooftop-gardening/rg-02.jpg";
 import rg03 from "@/assets/projects/rooftop-gardening/rg-03.jpg";
 import rgCover from "@/assets/projects/rooftop-gardening/cover-rooftop-gardening.jpg";
 
+import pl01 from "@/assets/projects/pondliner/pl-01.jpg";
+import pl02 from "@/assets/projects/pondliner/pl-02.jpg";
+import pl03 from "@/assets/projects/pondliner/pl-03.jpg";
+import plCover from "@/assets/projects/pondliner/cover-pondliner.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
