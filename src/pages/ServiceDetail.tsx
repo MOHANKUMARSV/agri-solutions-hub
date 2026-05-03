@@ -107,8 +107,9 @@ const ServiceDetail = () => {
               >
                 <img
                   src={p.image}
-                  alt={p.caption}
+                  alt={`${p.caption} — ${service.title} project by Indian Agro Service`}
                   loading="lazy"
+                  decoding="async"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-smooth duration-500"
                 />
                 <figcaption className="p-2 bg-card text-[11px] text-muted-foreground line-clamp-2">
