@@ -46,11 +46,34 @@ const Seo = ({ title, description, image, type = "website", keywords, jsonLd }: 
     slogan: SITE.tagline,
   };
 
-  const allLd = jsonLd
-    ? Array.isArray(jsonLd)
-      ? [orgLd, ...jsonLd]
-      : [orgLd, jsonLd]
-    : [orgLd];
+  // Auto-generated BreadcrumbList from the current pathname
+  const segments = pathname.split("/").filter(Boolean);
+  const prettify = (seg: string) =>
+    decodeURIComponent(seg)
+      .replace(/[-_]+/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+  const breadcrumbItems = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL + "/",
+    },
+    ...segments.map((seg, i) => ({
+      "@type": "ListItem",
+      position: i + 2,
+      name: prettify(seg),
+      item: `${SITE_URL}/${segments.slice(0, i + 1).join("/")}`,
+    })),
+  ];
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems,
+  };
+
+  const extraLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+  const allLd = [orgLd, breadcrumbLd, ...extraLd];
 
   return (
     <Helmet>
