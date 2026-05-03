@@ -10,8 +10,9 @@ const ServiceCard = ({ service }: { service: Service }) => (
     <div className="relative aspect-[4/3] overflow-hidden">
       <img
         src={service.image}
-        alt={service.title}
+        alt={`${service.title} — turnkey project by Indian Agro Service`}
         loading="lazy"
+        decoding="async"
         width={1280}
         height={800}
         className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"

@@ -1,10 +1,16 @@
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import { PROJECT_CATEGORIES } from "@/lib/projects";
 
 const Projects = () => {
   return (
     <>
+      <Seo
+        title="Projects Gallery — Polyhouse, Nursery, Solar Dryer & More"
+        description="Real polyhouse, nursery, landscaping, solar dryer, vertical farming, rooftop garden and pondliner projects executed by Indian Agro Service across Tamil Nadu and South India."
+        keywords={["polyhouse projects Tamil Nadu","nursery projects Erode","solar dryer projects India","vertical farming gallery","pondliner installation gallery"]}
+      />
       <PageHeader
         eyebrow="Projects Gallery"
         title="Real projects. Real outcomes."
@@ -26,8 +32,9 @@ const Projects = () => {
               >
                 <img
                   src={p.image}
-                  alt={p.caption}
+                  alt={`${p.caption} — ${cat.title} by Indian Agro Service`}
                   loading="lazy"
+                  decoding="async"
                   className={`w-full object-cover group-hover:scale-105 transition-smooth duration-500 ${i % 3 === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`}
                 />
                 <figcaption className="p-4 bg-card text-sm text-muted-foreground">

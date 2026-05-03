@@ -5,6 +5,7 @@ import { SERVICE_PHOTOS } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import NotFound from "./NotFound";
 
 const ServiceDetail = () => {
@@ -18,9 +19,32 @@ const ServiceDetail = () => {
 
   return (
     <>
+      <Seo
+        title={`${service.title} in Tamil Nadu & India`}
+        description={`${service.short} ${service.solution.slice(0, 90)}`}
+        image={coverImage}
+        type="service"
+        keywords={[
+          service.title,
+          `${service.title} Tamil Nadu`,
+          `${service.title} Coimbatore`,
+          `${service.title} Erode`,
+          `${service.title} cost India`,
+          `${service.title} setup`,
+          "Indian Agro Service",
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: service.title,
+          provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
+          areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
+          description: service.solution,
+        }}
+      />
       <section className="relative">
         <div className="absolute inset-0">
-          <img src={coverImage} alt={service.title} className="w-full h-full object-cover" width={1280} height={800} />
+          <img src={coverImage} alt={`${service.title} project by Indian Agro Service in Tamil Nadu`} fetchPriority="high" decoding="async" className="w-full h-full object-cover" width={1280} height={800} />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         </div>
         <div className="relative container py-20 md:py-28 text-primary-foreground">
@@ -83,8 +107,9 @@ const ServiceDetail = () => {
               >
                 <img
                   src={p.image}
-                  alt={p.caption}
+                  alt={`${p.caption} — ${service.title} project by Indian Agro Service`}
                   loading="lazy"
+                  decoding="async"
                   className="w-full aspect-square object-cover group-hover:scale-105 transition-smooth duration-500"
                 />
                 <figcaption className="p-2 bg-card text-[11px] text-muted-foreground line-clamp-2">
@@ -101,7 +126,7 @@ const ServiceDetail = () => {
         <div className="mt-8 grid sm:grid-cols-3 gap-6">
           {others.map((o) => (
             <Link key={o.slug} to={`/services/${o.slug}`} className="group rounded-2xl overflow-hidden border bg-card shadow-soft hover:shadow-elegant transition-smooth">
-              <img src={o.image} alt={o.title} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-smooth" width={1280} height={800} />
+              <img src={o.image} alt={`${o.title} — Indian Agro Service`} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-smooth" width={1280} height={800} />
               <div className="p-4">
                 <div className="font-display text-lg text-primary">{o.title}</div>
                 <div className="text-xs text-muted-foreground mt-1">{o.short}</div>

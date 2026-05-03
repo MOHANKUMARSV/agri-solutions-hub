@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Sprout, TrendingUp, Droplets, ArrowRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { CROPS, type Crop } from "@/lib/crops";
 
@@ -10,8 +11,9 @@ const CropCard = ({ crop }: { crop: Crop }) => (
     <div className="relative aspect-[4/3] overflow-hidden">
       <img
         src={crop.image}
-        alt={crop.name}
+        alt={`${crop.name} grown under ${crop.system} by Indian Agro Service`}
         loading="lazy"
+        decoding="async"
         width={1280}
         height={896}
         className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
@@ -73,6 +75,11 @@ const Crops = () => {
 
   return (
     <>
+      <Seo
+        title="Crops We Help You Grow — Cucumber, Capsicum, Strawberry & More"
+        description="Polyhouse, hydroponic and shade-net cultivation of cucumber, capsicum, strawberry, tomato, lettuce, chilli, gerbera and muskmelon — best-suited high-value crops for South Indian climate."
+        keywords={["polyhouse cucumber Tamil Nadu","capsicum farming India","strawberry hydroponic","gerbera flower polyhouse","tomato polyhouse Erode","lettuce hydroponic Coimbatore"]}
+      />
       <PageHeader
         eyebrow="What We Grow"
         title="Crops we help you grow"

@@ -7,6 +7,7 @@ import { SITE, waLink } from "@/lib/site";
 import ServiceCard from "@/components/ServiceCard";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 
 const stats = [
   { value: "500+", label: "Projects Delivered" },
@@ -31,9 +32,24 @@ const testimonials = [
 const Index = () => {
   return (
     <>
+      <Seo
+        title="Polyhouse, Hydroponics & Agri Projects across India"
+        description="Indian Agro Service builds turnkey polyhouse, hydroponics, vertical farms, rooftop gardens, nursery, solar dryer & pondliner projects across Tamil Nadu and India. Free site consultation."
+        keywords={[
+          "polyhouse construction Tamil Nadu",
+          "hydroponics farm setup India",
+          "vertical farming company",
+          "rooftop garden setup Coimbatore",
+          "nursery setup Erode",
+          "solar dryer manufacturer Tamil Nadu",
+          "pondliner installation South India",
+          "agri joint venture India",
+          "Indian Agro Service Perundurai",
+        ]}
+      />
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
-        <img src={hero} alt="Polyhouse farm interior with healthy crops" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={hero} alt="Polyhouse interior with healthy capsicum and tomato crops in Tamil Nadu — Indian Agro Service" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" width={1600} height={900} />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="container relative z-10 py-20 text-primary-foreground">
           <div className="max-w-3xl">

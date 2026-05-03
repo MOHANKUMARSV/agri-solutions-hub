@@ -1,11 +1,23 @@
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import LeadForm from "@/components/LeadForm";
+import Seo from "@/components/Seo";
 import { SITE, waLink } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => (
   <>
+    <Seo
+      title="Contact Indian Agro Service — Free Site Consultation"
+      description="Talk to Indian Agro Service for polyhouse, hydroponics, vertical farming, rooftop garden, nursery, solar dryer and pondliner projects. Call, WhatsApp or email — we respond same day."
+      keywords={["contact Indian Agro Service","polyhouse quote","hydroponics consultation","agri project Tamil Nadu contact"]}
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact Indian Agro Service",
+        url: "https://indianagroservice.in/contact",
+      }}
+    />
     <PageHeader eyebrow="Contact Us" title="Let's build your agri project" subtitle="Reach out via call, WhatsApp, email — or send us a message. We respond within working hours." />
 
     <section className="container py-16 grid lg:grid-cols-5 gap-10">

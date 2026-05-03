@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Leaf } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 import { SITE, waLink } from "@/lib/site";
@@ -9,6 +10,11 @@ import { SITE, waLink } from "@/lib/site";
 const Products = () => {
   return (
     <>
+      <Seo
+        title="Greenhouse, Hydroponics & Farm Materials — Products"
+        description="Greenhouse film, shade nets, drip & fertigation, hydroponic systems, pondliner geomembrane and farm infrastructure materials supplied by Indian Agro Service across India."
+        keywords={["greenhouse film supplier India","shade net Tamil Nadu","drip irrigation","HDPE pondliner","hydroponic system supplier India","grow bags Coimbatore"]}
+      />
       <PageHeader
         eyebrow="What we supply"
         title="Our Products"
