@@ -224,4 +224,12 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: vf05, caption: "Mulched raised beds in polyhouse" },
     ],
   },
+  pondliner: {
+    cover: plCover,
+    gallery: [
+      { image: pl03, caption: "Farm pond — geomembrane fill test" },
+      { image: pl02, caption: "Crew inspecting liner seams" },
+      { image: pl01, caption: "Sandbag-anchored liner edge" },
+    ],
+  },
 };
