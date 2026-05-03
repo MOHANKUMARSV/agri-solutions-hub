@@ -126,6 +126,25 @@ const ServiceDetail = () => {
         </section>
       ) : null}
 
+      {faqs?.length ? (
+        <section className="container py-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="text-xs uppercase tracking-wider font-semibold text-secondary">FAQs</div>
+              <h2 className="font-display text-2xl md:text-3xl text-primary mt-1">{service.title} — frequently asked questions</h2>
+            </div>
+            <dl className="space-y-4">
+              {faqs.map((f) => (
+                <div key={f.q} className="rounded-2xl border bg-card p-5 shadow-soft">
+                  <dt className="font-semibold text-primary">{f.q}</dt>
+                  <dd className="mt-2 text-sm text-foreground/80">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      ) : null}
+
       <section className="container pb-8 pt-12">
         <h2 className="font-display text-2xl md:text-3xl text-primary text-center">Other services you may like</h2>
         <div className="mt-8 grid sm:grid-cols-3 gap-6">
