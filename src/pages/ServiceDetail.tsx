@@ -5,6 +5,7 @@ import { SERVICE_PHOTOS } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
+import Seo from "@/components/Seo";
 import NotFound from "./NotFound";
 
 const ServiceDetail = () => {
@@ -18,6 +19,29 @@ const ServiceDetail = () => {
 
   return (
     <>
+      <Seo
+        title={`${service.title} in Tamil Nadu & India`}
+        description={`${service.short} ${service.solution.slice(0, 90)}`}
+        image={coverImage}
+        type="service"
+        keywords={[
+          service.title,
+          `${service.title} Tamil Nadu`,
+          `${service.title} Coimbatore`,
+          `${service.title} Erode`,
+          `${service.title} cost India`,
+          `${service.title} setup`,
+          "Indian Agro Service",
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: service.title,
+          provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
+          areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
+          description: service.solution,
+        }}
+      />
       <section className="relative">
         <div className="absolute inset-0">
           <img src={coverImage} alt={service.title} className="w-full h-full object-cover" width={1280} height={800} />

@@ -2,9 +2,25 @@ import { SERVICES } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 import PageHeader from "@/components/PageHeader";
+import Seo from "@/components/Seo";
 
 const Services = () => (
   <>
+    <Seo
+      title="Agri Project Services — Polyhouse, Hydroponics, Solar Dryer & More"
+      description="Eight specialized agri-project services from Indian Agro Service: polyhouse, hydroponics, vertical farming, rooftop gardens, nursery, landscaping, solar dryer & pondliner — across Tamil Nadu and India."
+      keywords={["polyhouse services","hydroponic farm builder","vertical farming India","rooftop gardening Coimbatore","nursery setup","solar dryer dome","pondliner HDPE","agri turnkey services Tamil Nadu"]}
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        itemListElement: SERVICES.map((s, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: s.title,
+          url: `https://indianagroservice.in/services/${s.slug}`,
+        })),
+      }}
+    />
     <PageHeader
       eyebrow="Our Services"
       title="End-to-end agri-project solutions"
