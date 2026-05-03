@@ -5,7 +5,7 @@ import vertical from "@/assets/projects/vertical-farming/cover-vertical-farming.
 import nursery from "@/assets/projects/nursery/cover-nursery.jpg";
 import landscaping from "@/assets/projects/landscaping/cover-landscaping.jpg";
 import solar from "@/assets/projects/solar-dryer/cover-solar-dryer.jpg";
-import pondliner from "@/assets/service-pondliner.jpg";
+import pondliner from "@/assets/projects/pondliner/cover-pondliner.jpg";
 
 export type Service = {
   slug: string;

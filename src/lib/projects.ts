@@ -42,6 +42,11 @@ import rg02 from "@/assets/projects/rooftop-gardening/rg-02.jpg";
 import rg03 from "@/assets/projects/rooftop-gardening/rg-03.jpg";
 import rgCover from "@/assets/projects/rooftop-gardening/cover-rooftop-gardening.jpg";
 
+import pl01 from "@/assets/projects/pondliner/pl-01.jpg";
+import pl02 from "@/assets/projects/pondliner/pl-02.jpg";
+import pl03 from "@/assets/projects/pondliner/pl-03.jpg";
+import plCover from "@/assets/projects/pondliner/cover-pondliner.jpg";
+
 export type ProjectPhoto = {
   id: string;
   image: string;
@@ -139,6 +144,17 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       { id: "vf-05", image: vf05, caption: "Mulched raised beds inside controlled polyhouse" },
     ],
   },
+  {
+    key: "pondliner",
+    title: "Pondliner Projects",
+    description:
+      "HDPE / geomembrane pondliner installation for farm ponds and irrigation reservoirs — fully sealed, leak-proof, UV-stabilised liners weighed down with sandbags during fill testing.",
+    photos: [
+      { id: "pl-03", image: pl03, caption: "Large farm pond lined with HDPE geomembrane — fill test in progress" },
+      { id: "pl-02", image: pl02, caption: "Crew checking liner seams during water filling" },
+      { id: "pl-01", image: pl01, caption: "Inlet pipe & sandbag-anchored edge of pondliner" },
+    ],
+  },
 ];
 
 // Per-service photo map: cover image + small gallery (uses processed real project photos
@@ -206,6 +222,14 @@ export const SERVICE_PHOTOS: Record<string, ServicePhotos> = {
       { image: vf06, caption: "Drip-fed PVC tower — close-up" },
       { image: vf04, caption: "High-density strawberry beds" },
       { image: vf05, caption: "Mulched raised beds in polyhouse" },
+    ],
+  },
+  pondliner: {
+    cover: plCover,
+    gallery: [
+      { image: pl03, caption: "Farm pond — geomembrane fill test" },
+      { image: pl02, caption: "Crew inspecting liner seams" },
+      { image: pl01, caption: "Sandbag-anchored liner edge" },
     ],
   },
 };
