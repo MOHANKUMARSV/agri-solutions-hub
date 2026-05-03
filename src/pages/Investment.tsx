@@ -4,6 +4,7 @@ import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
 import jvImg from "@/assets/jv-partnership.jpg";
+import { INVESTMENT_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const steps = [
   ["You bring capital", "Investors fund the project setup — polyhouse, hydroponic farm, nursery, etc."],
@@ -23,6 +24,7 @@ const Investment = () => (
       title="Agri Joint Venture & Farm Investment Projects in India"
       description="Invest in Indian agriculture the modern way. IAS designs, builds and operates polyhouse, hydroponic and integrated farm JV projects across Tamil Nadu and India with transparent profit sharing."
       keywords={["agri investment India","polyhouse joint venture","hydroponic farm investment","farm IRR Tamil Nadu","agritech JV"]}
+      jsonLd={buildFaqLd(INVESTMENT_FAQS)}
     />
     <PageHeader
       eyebrow="Joint Venture Projects"

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
+import { SERVICE_FAQS, buildFaqLd } from "@/lib/faqs";
 import NotFound from "./NotFound";
 
 const ServiceDetail = () => {
@@ -16,6 +17,7 @@ const ServiceDetail = () => {
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
   const photos = SERVICE_PHOTOS[service.slug];
   const coverImage = photos?.cover || service.image;
+  const faqs = SERVICE_FAQS[service.slug];
 
   return (
     <>
@@ -33,14 +35,17 @@ const ServiceDetail = () => {
           `${service.title} setup`,
           "Indian Agro Service",
         ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          serviceType: service.title,
-          provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
-          areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
-          description: service.solution,
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: service.title,
+            provider: { "@type": "LocalBusiness", name: "Indian Agro Service" },
+            areaServed: ["Tamil Nadu", "Karnataka", "Kerala", "Andhra Pradesh", "Telangana", "India"],
+            description: service.solution,
+          },
+          ...(faqs ? [buildFaqLd(faqs)] : []),
+        ]}
       />
       <section className="relative">
         <div className="absolute inset-0">
@@ -117,6 +122,25 @@ const ServiceDetail = () => {
                 </figcaption>
               </figure>
             ))}
+          </div>
+        </section>
+      ) : null}
+
+      {faqs?.length ? (
+        <section className="container py-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="text-xs uppercase tracking-wider font-semibold text-secondary">FAQs</div>
+              <h2 className="font-display text-2xl md:text-3xl text-primary mt-1">{service.title} — frequently asked questions</h2>
+            </div>
+            <dl className="space-y-4">
+              {faqs.map((f) => (
+                <div key={f.q} className="rounded-2xl border bg-card p-5 shadow-soft">
+                  <dt className="font-semibold text-primary">{f.q}</dt>
+                  <dd className="mt-2 text-sm text-foreground/80">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
       ) : null}

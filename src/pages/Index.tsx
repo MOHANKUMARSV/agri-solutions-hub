@@ -8,6 +8,7 @@ import ServiceCard from "@/components/ServiceCard";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
+import { HOME_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const stats = [
   { value: "500+", label: "Projects Delivered" },
@@ -46,6 +47,7 @@ const Index = () => {
           "agri joint venture India",
           "Indian Agro Service Perundurai",
         ]}
+        jsonLd={buildFaqLd(HOME_FAQS)}
       />
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">

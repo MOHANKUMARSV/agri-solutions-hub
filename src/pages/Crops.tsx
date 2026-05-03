@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { CROPS, type Crop } from "@/lib/crops";
+import { CROPS_FAQS, buildFaqLd } from "@/lib/faqs";
 
 const CropCard = ({ crop }: { crop: Crop }) => (
   <article className="group rounded-3xl overflow-hidden border bg-card shadow-soft hover:shadow-elegant transition-smooth flex flex-col">
@@ -79,6 +80,7 @@ const Crops = () => {
         title="Crops We Help You Grow — Cucumber, Capsicum, Strawberry & More"
         description="Polyhouse, hydroponic and shade-net cultivation of cucumber, capsicum, strawberry, tomato, lettuce, chilli, gerbera and muskmelon — best-suited high-value crops for South Indian climate."
         keywords={["polyhouse cucumber Tamil Nadu","capsicum farming India","strawberry hydroponic","gerbera flower polyhouse","tomato polyhouse Erode","lettuce hydroponic Coimbatore"]}
+        jsonLd={buildFaqLd(CROPS_FAQS)}
       />
       <PageHeader
         eyebrow="What We Grow"
