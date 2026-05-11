@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ias-header-logo-v3.jpg";
+import logo from "@/assets/ias-header-logo-v4.jpg";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -41,10 +41,10 @@ const Header = () => {
         <Link to="/" className="flex items-center" aria-label={SITE.name}>
           <img
             src={logo}
-            alt={`${SITE.name} — The Farmer's Choice logo`}
+            alt="Indian Agro Service — The Farmer's Choice | Polyhouse, Hydroponics & Agri Project Solutions"
             className="h-20 md:h-24 w-auto"
-            width={596}
-            height={400}
+            width={1125}
+            height={419}
             decoding="async"
             fetchPriority="high"
           />
