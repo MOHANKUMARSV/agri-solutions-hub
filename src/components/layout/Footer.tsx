@@ -8,8 +8,14 @@ const Footer = () => (
   <footer className="bg-primary text-primary-foreground mt-24">
     <div className="container py-14 grid gap-10 md:grid-cols-4">
       <div className="md:col-span-1">
-        <div className="bg-background rounded-xl p-3 inline-block">
-          <img src={logo} alt={SITE.name} className="h-44 md:h-52 w-auto" />
+        <div className="bg-background rounded-xl p-2 md:p-3 inline-block max-w-full">
+          <img
+            src={logo}
+            alt={`${SITE.name} — The Farmer's Choice`}
+            className="h-28 md:h-28 lg:h-36 xl:h-44 w-auto"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <p className="mt-4 text-sm text-primary-foreground/80">
           {SITE.tagline}. End-to-end agri solutions across India — built for yield, profit and longevity.

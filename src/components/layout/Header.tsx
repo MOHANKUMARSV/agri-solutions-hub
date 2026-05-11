@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ias-full-logo-v2.png";
+import logo from "@/assets/ias-header-logo-v3.png";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -39,7 +39,15 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between h-24 md:h-28">
         <Link to="/" className="flex items-center" aria-label={SITE.name}>
-          <img src={logo} alt={`${SITE.name} logo`} className="h-20 md:h-24 w-auto" />
+          <img
+            src={logo}
+            alt={`${SITE.name} — The Farmer's Choice logo`}
+            className="h-20 md:h-24 w-auto"
+            width={596}
+            height={400}
+            decoding="async"
+            fetchPriority="high"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
